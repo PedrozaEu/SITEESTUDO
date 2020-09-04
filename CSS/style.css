@@ -103,17 +103,27 @@ p{
 
 .menu a{
     text-decoration: none;
+    display: inline-block;
     color: white;
     font-size: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: block;
-    opacity: 0.3;
 }
 
 /* NÃO DESFEZ A OPACIDADE DO SELECIONADO. VERIFICAR */
-.menu a.selected{
-    opacity: 1;
+.selected::after{
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background:#fff;
+    transition: width 0.3s;
+}
+
+.selected:hover::after{
+    width: 100%;
+    transition: width 0.3s;
 }
 
