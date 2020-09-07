@@ -112,7 +112,6 @@ p{
     display: block;
 }
 
-/* NÃO DESFEZ A OPACIDADE DO SELECIONADO. VERIFICAR */
 .selected::after{
     content:'';
     display: block;
